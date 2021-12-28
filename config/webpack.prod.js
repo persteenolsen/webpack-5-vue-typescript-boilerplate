@@ -17,7 +17,8 @@ module.exports = merge(common, {
   
     
   // Production: Magic happen here transpiling to es5 to partly support older browser like IE11
-  target: ['web', 'es5'], 
+  // Note: By setting target to es5 in tsconfig as well the below is somehow needed for IE 11 !
+   target: ['web', 'es5'], 
   
   plugins: [
     // Extracts CSS into separate files

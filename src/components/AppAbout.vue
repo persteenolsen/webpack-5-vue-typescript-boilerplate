@@ -3,7 +3,7 @@
    
                 <h1>Description</h1>
   
-                - This Vue with TypeScript SPA page application was made with a Webpack 5 configuration
+                - This Vue with TypeScript single page application ( SPA ) was made with a Webpack 5 configuration
                 <br/> <br/>
 				
                 <b>Last Updated</b>  <br />
