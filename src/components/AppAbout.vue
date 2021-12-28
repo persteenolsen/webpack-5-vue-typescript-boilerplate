@@ -13,6 +13,7 @@
                 				                 
 			    - Showing some of the power of Webpack <br />
 				- Using Hot Reload / HMR by Webpack Dev Server <br />
+				- Partly support for IE 11<br />
 				- Showing routing by Vue.js <br />
                 - Vue with TypeScript<br />
 				- Custom 404 Error Page. Click the Secret menu link for a demo <br />
