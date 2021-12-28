@@ -14,17 +14,17 @@ module.exports = {
   
   resolve: {
 	  
-	  // Note: Files with extentions .vue and .tsx are handled in the loader section which should be fine !
-		// However, the array of extentions may be enabled  and maybe tsx is not needed
-    // extensions: [ 'tsx', '.ts', '.js', '.vue' ],
+	     // Note: Files with extentions .vue and .tsx are handled in the loader section which should be fine !
+		 // However, the array of extentions may be enabled  and maybe tsx is not needed
+         // extensions: [ 'tsx', '.ts', '.js', '.vue' ],
 		 
 		 // The project is ready to use Vanilla JavaScript too and .js should / may needed to be resolved here at least for "my logic :-)"
 		 extensions: [ '.js' ],
 		 alias: {
-          'components': pathtoresolve.resolve(__dirname, '../src/components/'),
+                'components': pathtoresolve.resolve(__dirname, '../src/components/'),
 			    'images': pathtoresolve.resolve(__dirname, '../src/images/'),
-		      'styles': pathtoresolve.resolve(__dirname, '../src/styles/'),
-		 }
+		        'styles': pathtoresolve.resolve(__dirname, '../src/styles/'),
+		        }
   },
 
   // Where webpack outputs the assets and bundles
@@ -79,39 +79,39 @@ module.exports = {
 		   // Note: Maybe only .ts is needed ! 
 		   // test: /\.tsx?$/,
 		   
-		    test: /\.(tsx|ts)$/,
-        loader: "ts-loader",
-        exclude: /node_modules/,
-        options: {
-                // Tell to ts-loader: if you check .vue file extension, handle it like a ts file
-                appendTsSuffixTo: [/\.vue$/]
-            }
-          },
+		   test: /\.(tsx|ts)$/,
+           loader: "ts-loader",
+           exclude: /node_modules/,
+           options: {
+                   // Tell to ts-loader: if you check .vue file extension, handle it like a ts file
+                   appendTsSuffixTo: [/\.vue$/]
+                  }
+           },
 	  
 	       {test: /\.vue$/, loader: 'vue-loader' },
 	  
 	        // JavaScript: Use Babel to transpile JavaScript files
-         {test: /\.js$/, exclude: /node_modules/, use: ['babel-loader']},
+           {test: /\.js$/, exclude: /node_modules/, use: ['babel-loader']},
 
-          // Styles: Inject CSS into the head with source maps
-          {
+           // Styles: Inject CSS into the head with source maps
+           {
            test: /\.(scss|css)$/,
-           use: [
+               use: [
           
-		      // Note: Only style-loader works for me !!!
-		      // 'vue-style-loader',
-		      'style-loader',
-              {loader: 'css-loader', options: {sourceMap: true, importLoaders: 1}},
-              {loader: 'postcss-loader', options: {sourceMap: true}},
-              {loader: 'sass-loader', options: {sourceMap: true}},
-           ],
-       },
+		           // Note: Only style-loader works for me !!!
+		           // 'vue-style-loader',
+		           'style-loader',
+                   {loader: 'css-loader', options: {sourceMap: true, importLoaders: 1}},
+                   {loader: 'postcss-loader', options: {sourceMap: true}},
+                   {loader: 'sass-loader', options: {sourceMap: true}},
+                  ],
+           },
 
-      // Images: Copy image files to build folder
-      {test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource'},
+           // Images: Copy image files to build folder
+          {test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource'},
 
-      // Fonts and SVGs: Inline files
-      {test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline'},
+          // Fonts and SVGs: Inline files
+          {test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline'},
     ],
   },
 }
