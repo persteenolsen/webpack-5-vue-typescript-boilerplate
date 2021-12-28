@@ -14,16 +14,16 @@ module.exports = {
   
   resolve: {
 	  
-	   // Note: Files with extentions .vue and .tsx are handled in the loader section which should be fine !
-		 // However, the array of extentions may be enabled  and maybe tsx is not needed
-     // extensions: [ 'tsx', '.ts', '.js', '.vue' ],
+	  // Note: Files with extentions .vue and .tsx are handled in the loader section which should be fine !
+		// However, the array of extentions may be enabled  and maybe tsx is not needed
+    // extensions: [ 'tsx', '.ts', '.js', '.vue' ],
 		 
 		 // The project is ready to use Vanilla JavaScript too and .js should / may needed to be resolved here at least for "my logic :-)"
 		 extensions: [ '.js' ],
 		 alias: {
-            'components': pathtoresolve.resolve(__dirname, '../src/components/'),
-			      'images': pathtoresolve.resolve(__dirname, '../src/images/'),
-		        'styles': pathtoresolve.resolve(__dirname, '../src/styles/'),
+          'components': pathtoresolve.resolve(__dirname, '../src/components/'),
+			    'images': pathtoresolve.resolve(__dirname, '../src/images/'),
+		      'styles': pathtoresolve.resolve(__dirname, '../src/styles/'),
 		 }
   },
 
@@ -80,9 +80,9 @@ module.exports = {
 		   // test: /\.tsx?$/,
 		   
 		    test: /\.(tsx|ts)$/,
-            loader: "ts-loader",
-            exclude: /node_modules/,
-            options: {
+        loader: "ts-loader",
+        exclude: /node_modules/,
+        options: {
                 // Tell to ts-loader: if you check .vue file extension, handle it like a ts file
                 appendTsSuffixTo: [/\.vue$/]
             }
@@ -91,7 +91,7 @@ module.exports = {
 	       {test: /\.vue$/, loader: 'vue-loader' },
 	  
 	        // JavaScript: Use Babel to transpile JavaScript files
-          {test: /\.js$/, exclude: /node_modules/, use: ['babel-loader']},
+         {test: /\.js$/, exclude: /node_modules/, use: ['babel-loader']},
 
           // Styles: Inject CSS into the head with source maps
           {
