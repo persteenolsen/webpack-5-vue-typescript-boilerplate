@@ -14,15 +14,15 @@ module.exports = {
   
   resolve: {
 	  
-	   // Note: Files with extentions .vue and .tsx are handled in the loader section which should be fine !
+	     // Note: Files with extentions .vue and .tsx are handled in the loader section which should be fine !
 		 // However, the array of extentions may be enabled  and maybe tsx is not needed
-     // extensions: [ 'tsx', '.ts', '.js', '.vue' ],
+         // extensions: [ 'tsx', '.ts', '.js', '.vue' ],
 		 
 		 // The project is ready to use Vanilla JavaScript too and .js should / may needed to be resolved here at least for "my logic :-)"
 		 extensions: [ '.js' ],
 		 alias: {
-            'components': pathtoresolve.resolve(__dirname, '../src/components/'),
-			      'images': pathtoresolve.resolve(__dirname, '../src/images/'),
+                'components': pathtoresolve.resolve(__dirname, '../src/components/'),
+			    'images': pathtoresolve.resolve(__dirname, '../src/images/'),
 		        'styles': pathtoresolve.resolve(__dirname, '../src/styles/'),
 		        }
   },
@@ -72,23 +72,23 @@ module.exports = {
     
 	rules: [
 	
-          // TypeScript files are handled here by the ts-loader 
-		  // Note: It seems that both .tsx and .ts works in regexpr below
-	      {
+         // TypeScript files are handled here by the ts-loader 
+		 // Note: It seems that both .tsx and .ts works in regexpr below
+	     {
            
 		   // Note: Maybe only .ts is needed ! 
 		   // test: /\.tsx?$/,
 		   
-		   test: /\.(tsx|ts)$/,
-       loader: "ts-loader",
-       exclude: /node_modules/,
-       options: {
+		  test: /\.(tsx|ts)$/,
+          loader: "ts-loader",
+          exclude: /node_modules/,
+          options: {
                    // Tell to ts-loader: if you check .vue file extension, handle it like a ts file
                    appendTsSuffixTo: [/\.vue$/]
                   }
           },
 	  
-	       {test: /\.vue$/, loader: 'vue-loader' },
+	     {test: /\.vue$/, loader: 'vue-loader' },
 	  
 	       // JavaScript: Use Babel to transpile JavaScript files
          {test: /\.js$/, exclude: /node_modules/, use: ['babel-loader']},
@@ -101,9 +101,9 @@ module.exports = {
 		           // Note: Only style-loader works for me !!!
 		           // 'vue-style-loader',
 		           'style-loader',
-                {loader: 'css-loader', options: {sourceMap: true, importLoaders: 1}},
-                {loader: 'postcss-loader', options: {sourceMap: true}},
-                {loader: 'sass-loader', options: {sourceMap: true}},
+                   {loader: 'css-loader', options: {sourceMap: true, importLoaders: 1}},
+                   {loader: 'postcss-loader', options: {sourceMap: true}},
+                   {loader: 'sass-loader', options: {sourceMap: true}},
                 ],
           },
 
