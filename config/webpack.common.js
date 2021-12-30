@@ -7,6 +7,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
+// Note: For impoving performance the plugin will do the TypeScript type checking instead of ts-loader which use tsc under the hood
+// Enable the statement "transpileOnly: true" in the rules section
+ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+
 module.exports = {
   
   // Where webpack looks to start building the bundle
@@ -40,6 +44,11 @@ module.exports = {
   
      // Vue plugin for the magic
     new VueLoaderPlugin(), 
+		
+	// Note: For better performance the plugin will do the TypeScript type checking instead of ts-loader ( which use tsc under the hood )
+	new ForkTsCheckerWebpackPlugin({
+        async: false,
+    }),
 	
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
@@ -72,25 +81,27 @@ module.exports = {
     
 	rules: [
 	
-         // TypeScript files are handled here by the ts-loader 
-		 // Note: It seems that both .tsx and .ts works in regexpr below
+         // Note: It seems that both .tsx and .ts works in regexp below
+		 // ts-loader for TypeScript files and handles vue extentions		 
 	     {
-           
-		   // Note: Maybe only .ts is needed ! 
-		   // test: /\.tsx?$/,
-		   
-		  test: /\.(tsx|ts)$/,
+          test: /\.(tsx|ts)$/,
           loader: "ts-loader",
           exclude: /node_modules/,
           options: {
-                   // Tell to ts-loader: if you check .vue file extension, handle it like a ts file
-                   appendTsSuffixTo: [/\.vue$/]
+                   
+				   // Tells ts-loader: if you check .vue file extension, handle it like a ts file
+				   // As an alternative it seems to handle Vue by adding '.vue' to the array of extention as well as '.js' ect..
+                    appendTsSuffixTo: [/\.vue$/],
+				    
+					// Note: Enable the statement below and do the TypeScript type checking by Webpack plugin: "fork-ts-checker-webpack-plugin"
+					transpileOnly: true
                   }
           },
 	  
+	     // vue-loder for Vue components / files 
 	     {test: /\.vue$/, loader: 'vue-loader' },
 	  
-	       // JavaScript: Use Babel to transpile JavaScript files
+	      // babel-loader for Vanilla JavaScript modules / files
          {test: /\.js$/, exclude: /node_modules/, use: ['babel-loader']},
 
          // Styles: Inject CSS into the head with source maps

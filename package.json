@@ -1,7 +1,7 @@
 {
   "name": "webpack-5-vue-typescript-boilerplate",
   "version": "2.0.0",
-  "description": "A webpack 5 boilerplate with Vue.js",
+  "description": "A webpack 5 boilerplate with Vue.js and ready for TypeScript",
   "main": "main.js",
   "author": "Per Olsen",
   "license": "MIT",
@@ -29,6 +29,7 @@
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.0",
     "css-minimizer-webpack-plugin": "^1.1.5",
+    "fork-ts-checker-webpack-plugin": "^6.5.0",
     "html-webpack-plugin": "^5.0.0-alpha.7",
     "http-server": "^0.12.3",
     "mini-css-extract-plugin": "^1.0.0",

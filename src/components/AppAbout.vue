@@ -7,13 +7,14 @@
                 <br/> <br/>
 				
                 <b>Last Updated</b>  <br />
-                - 29-12-2021 <br /> <br />
+                - 30-12-2021 <br /> <br />
                 				
                 <b>Main functionality</b> <br />
                 				                 
 			    - Showing some of the power of Webpack <br />
 				- TypeScript files are compiled by ts-loader<br />
-				- TypeScript type checking is done by the ts-loader<br />
+				- The project allows TypeScript type checking by the ts-loader which is using tsc under the hood<br />
+				- For better performance / an alternative the TypeScript type checking can be done by the Webpack plugin "fork-ts-checker-webpack-plugin"<br />
 				- Using Hot Reload / HMR by Webpack Dev Server <br />
 				- Partly support for IE 11<br />
 				- Showing routing by Vue.js <br />
