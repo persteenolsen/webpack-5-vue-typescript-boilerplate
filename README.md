@@ -41,20 +41,13 @@ npm prod
 
 # Babel
 
-- [`@babel/core`]
-(https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
-- [`@babel/plugin-proposal-class-properties`]
-(https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties on a class
-- [`@babel/preset-env`]
-(https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
-- [`@babel/babel-plugin-transform-runtime`]
-(https://babeljs.io/docs/en/babel-plugin-transform-runtime) - Helper for Babel to use async/await
-- [`@babel/plugin-proposal-object-rest-spread`] 
-(https://babeljs.io/docs/en/babel-plugin-proposal-object-rest-spread) - For using rest
-- [`@babel/plugin-transform-arrow-functions`] 
-(https://babeljs.io/docs/en/babel-plugin-transform-arrow-functions) - For using arrow funtions
-- [`@babel/plugin-transform-async-to-generator`] 
-(https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) - To use async and generators
+- [`@babel/core`](https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
+- [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties on a class
+- [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
+- [`@babel/babel-plugin-transform-runtime`](https://babeljs.io/docs/en/babel-plugin-transform-runtime) - Helper for Babel to use async/await
+- [`@babel/plugin-proposal-object-rest-spread`](https://babeljs.io/docs/en/babel-plugin-proposal-object-rest-spread) - For using rest
+- [`@babel/plugin-transform-arrow-functions`](https://babeljs.io/docs/en/babel-plugin-transform-arrow-functions) - For using arrow funtions
+- [`@babel/plugin-transform-async-to-generator`](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) - To use async and generators
 
 
 # Vue Loaders
@@ -67,9 +60,9 @@ npm prod
 
 - [`babel-loader`](https://webpack.js.org/loaders/babel-loader/) - Transpile files - Babel/webpack
 - [`sass-loader`](https://webpack.js.org/loaders/sass-loader/) - Load SCSS and compile to CSS
-  - [`node-sass`](https://github.com/sass/node-sass) - Node Sass
+- [`node-sass`](https://github.com/sass/node-sass) - Node Sass
 - [`postcss-loader`](https://webpack.js.org/loaders/postcss-loader/) - Process CSS with PostCSS
-  - [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) - Sensible defaults for PostCSS
+- [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) - Sensible defaults for PostCSS
 - [`css-loader`](https://webpack.js.org/loaders/css-loader/) - Resolve CSS imports
 - [`style-loader`](https://webpack.js.org/loaders/style-loader/) - Inject CSS into the DOM
 
