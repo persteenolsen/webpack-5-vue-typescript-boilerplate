@@ -7,7 +7,7 @@
                 <br/> <br/>
 				
                 <div class="test"><b>Last Updated</b></div>
-                - 26-01-2022 <br /> <br />
+                - 14-07-2023 <br /> <br />
                 				
                 <b>Main functionality</b> <br />
                 - Upgrading from Node 12.16 to Node 14.17<br />				                 
