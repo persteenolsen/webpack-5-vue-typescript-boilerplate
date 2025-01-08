@@ -6,11 +6,11 @@
                 - This Vue with TypeScript single page application ( SPA ) was created with a Webpack 5 configuration
                 <br/> <br/>
 				
-                <div class="test"><b>Last Updated</b></div>
-                - 11-10-2023 <br /> <br />
+                <div class="test"><b>Last Updated:</b></div>
+                - 08-01-2025 <br /> <br />
                 				
                 <b>Main functionality</b> <br />
-                - Upgrading from Node 12.16 to Node 14.17<br />				                 
+                - Node history upgrading from 12.16 => Node 14.17 => 20.18.1<br />				                 
 			    - Showing some of the power of Webpack <br />
 				- TypeScript files are compiled by ts-loader<br />
 				- The project allows TypeScript type checking by the ts-loader which is using tsc under the hood<br />
