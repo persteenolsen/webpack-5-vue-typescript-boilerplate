@@ -16,7 +16,6 @@
     "webpack boilerplate"
   ],
   "devDependencies": {
-    
     "@babel/core": "^7.26.0",
     "@babel/plugin-transform-class-properties": "^7.25.9",
     "@babel/plugin-transform-object-rest-spread": "^7.25.9",
@@ -39,11 +38,9 @@
     "sass": "^1.83.0",
     "sass-loader": "^16.0.4",
     "style-loader": "^4.0.0",
-        
     "fork-ts-checker-webpack-plugin": "^6.5.0",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.4",
-    
     "vue-loader": "^15.11.1",
     "vue-style-loader": "^4.1.3",
     "vue-template-compiler": "^2.7.16",
@@ -64,6 +61,6 @@
     "whatwg-fetch": "^3.6.20"
   },
   "volta": {
-    "node": "20.18.1"
+    "node": "22.15.0"
   }
 }

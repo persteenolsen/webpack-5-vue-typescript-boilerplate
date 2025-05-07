@@ -1,11 +1,11 @@
 # Webpack 5 Vue.js with TypeScript Boilerplate
 
-Webpack 5 boilerplate using Vue.js, TypeScript, Babel, PostCSS and Sass with a hot dev server and an optimized production build. By setting tartget to es5 in tsconfig IE 11 is supported. If IE 11 dont needs support you could set target to ES2018 
+Webpack 5 boilerplate using Vue.js, TypeScript, Babel, PostCSS and Sass with a hot dev server and an optimized production build.
  
 
-Last updated: 06-05-2025
+Last updated: 07-05-2025
 
-Node Version: 20.18.1
+Node Version: 22.15.0
 
 Solution / Issue:
 

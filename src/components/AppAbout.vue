@@ -7,16 +7,16 @@
                 <br/> <br/>
 				
                 <div class="test"><b>Last Updated:</b></div>
-                - 06-05-2025 <br /> <br />
+                - 07-05-2025 <br /> <br />
                 				
                 <b>Main functionality</b> <br />
-                - Node history upgrading from 12.16 => Node 14.17 => 20.18.1<br />				                 
+                - Node history upgrading from 12.16 => Node 14.17 => 20.18.1 => 22.15.1<br />				                 
 			    - Showing some of the power of Webpack <br />
 				- TypeScript files are compiled by ts-loader<br />
 				- The project allows TypeScript type checking by the ts-loader which is using tsc under the hood<br />
 				- For better performance / an alternative the TypeScript type checking can be done by the Webpack plugin "fork-ts-checker-webpack-plugin"<br />
 				- Using Hot Reload / HMR by Webpack Dev Server <br />
-				- Partly support for IE 11<br />
+				- Partly support for some older Browsers<br />
 				- Showing routing by Vue.js <br />
                 - Vue with TypeScript<br />
 				- Custom 404 Error Page. Click the Secret menu link for a demo <br />
